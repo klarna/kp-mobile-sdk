@@ -1,0 +1,4 @@
+framework module KlarnaPayments {
+  header "KlarnaPayments-Swift.h"
+  requires objc
+}
