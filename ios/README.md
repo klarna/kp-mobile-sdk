@@ -10,7 +10,25 @@ Klarna Payments SDK BETA, API subject to change.
 <br/>
 
 
-## Links
+## Introduction
+
+The Payments SDK is a native integration to render Klarna Payments on iOS and Android. Merchants can offer customers Klarna's payment options in their mobile apps easily and safely.
+
+This guide is a technical introduction to the Payments SDK. It describes what the Payments SDK is, what it does, and how merchants can integrate it into their apps. 
+
+**Glossary:**
+
+| Term | Description |
+| --- | --- |
+| Klarna Payments | Klarna Payments (KP) is Klarna's solution for providing merchants with standalone payment methods the user can choose from.
+| Payment Method Category | KP renders categories of payment methods, like "Slice It", "Pay Now" and "Pay Later".
+| Client Token | A token identifying an order session. |  
+| Authorization Token | A token identifying an authorized order. Needed to complete the order. |
+| Authorization | Customer credit assessment before completing an order. |
+| Reauthorization | New credit assessment if the order details have changed. |
+| Finalization | An additional assessment required with some payment methods.  |
+
+**Links:**
 
 <!--To Do
 Klarna Payments SDK iOS Reference
@@ -43,22 +61,8 @@ The Klarna Payments SDK is avaliable through Carthage and Cocoapods.
     pod "KlarnaPayments"
     ```
 
-* Using the Swift Package Manager, see `Package.swift`:
-
-    ```swift
-    name: "KlarnaPayments"
-    ```
-
 * Alternatively you can add the framework manually.
 
-<!--To Do
-* Remember to link the required frameworks as well.
-
-    ```swift
-    SafariServices ???
-    WebKit ???
-    ```
--->
 * Import the framework and get started!
 
     ```swift
@@ -66,9 +70,11 @@ The Klarna Payments SDK is avaliable through Carthage and Cocoapods.
     ```
 
 
-## Integration
+## Integration Steps
 
-The SDK allows developers to integrate a native payments experience into their applications. We offer one way applications may present Klarna Payments where we manage the payment view which you embed into your applications UI layout and handle the initialization, loading, authorization, finalization, sizing and errors.
+The SDK allows merchants to integrate a native payments experience into their apps, and one way merchants may present Klarna Payments where the SDK manages the payment view which merchants embed into their apps UI layout and handle the initialization, loading, authorization, finalization, sizing and errors.
+
+The merchants process to integrate the SDK into their app is these steps:
 
 * To add the payments in your native flow, first create a credit session through Klarna's Payments API, you are then provided with a client token and one or more payment method categories. See https://developers.klarna.com/api/#payments-api-create-a-new-credit-session, the example app shows you how this can be done.
 
@@ -100,7 +106,7 @@ The SDK allows developers to integrate a native payments experience into their a
 
 If a Klarna payment error occurred in any step. The `KlarnaPaymentViewDelegate` `klarnaPaymentView(paymentView:, failedWithError:)` function provides an error about what happened and whether it’s recoverable.
 
-You may add the payment view to your applications UI layout once it has been initialized or at a later point. The `KlarnaPaymentViewDelegate` provides several steps where you can find a suitable solution for your applications.
+You may add the payment view to your apps UI layout once it has been initialized or at a later point. The `KlarnaPaymentViewDelegate` provides several steps where you can find a suitable solution for your apps.
 
 You are responsible for resizing the payment view.
 

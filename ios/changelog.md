@@ -3,5 +3,4 @@
 
 ## 0.1-beta
 
-- Initial beta. ⚠️ The Klarna Payments SDK is under development and should NOT be used in production! ⚠️
-
+- Klarna Payments SDK BETA, API subject to change.
