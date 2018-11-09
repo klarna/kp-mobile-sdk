@@ -1,30 +1,13 @@
 # Klarna Payments SDK for Mobile Apps
 
-<br/>
+This SDK allows merchants to integrate the Klarna Payments' payment methods into their applications. 
 
----
-Klarna Payments SDK BETA, API subject to change.
+This SDK is a beta, as such, it's subject to change. 
 
----
+## iOS 
 
-<br/>
+The iOS framework is available through Carthage and Cocoapods, with integration and API docs [here]().
 
+## Android
 
-The SDK allows to integrate [Klarna Payments](https://www.klarna.com/us/business/products/) in 
-native iOS and Android applications. 
-It's aimed to make integration simple and provide the smoothest in-app purchase experience.
-
-
-### iOS
-
-##### [Usage](ios/README.md) | [Example App](https://github.com/klarna/kp-ios-example-app)
-
-<!--
-To Do
-[Documentation Klarna Developers](https://)
--->
-
-<!--
-To Do
-### Android
--->
+The Android release is available through Maven, with integration and API docs [here]().
