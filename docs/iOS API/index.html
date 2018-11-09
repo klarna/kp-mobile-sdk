@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KlarnaPayments  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="KlarnaPayments  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">KlarnaPayments Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">KlarnaPayments Reference</a>
+        <img id="carat" src="img/carat.png" />
+        KlarnaPayments  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/KlarnaPaymentView.html">KlarnaPaymentView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KlarnaPaymentsError.html">KlarnaPaymentsError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments9AuthorizeSSvp">Authorize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments8FinalizeSSvp">Finalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments10InitializeSSvp">Initialize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments4LoadSSvp">Load</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments8PayLaterSSvp">PayLater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments6PayNowSSvp">PayNow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments11ReauthorizeSSvp">Reauthorize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:14KlarnaPayments7SliceItSSvp">SliceIt</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/KlarnaPaymentViewDelegate.html">KlarnaPaymentViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:14KlarnaPayments0A13PaymentActiona">KlarnaPaymentAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:14KlarnaPayments0A21PaymentMethodCategorya">KlarnaPaymentMethodCategory</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='klarnapayments' class='heading'>KlarnaPayments</h1>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>This guide is a technical introduction to the Payments SDK. It describes what the Payments SDK is, what it
+does, and how merchants can integrate it into their application. </p>
+<h3 id='glossary' class='heading'>Glossary</h3>
+
+<p>This is a list of terms used throughout the document. </p>
+
+<table><thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Klarna Payments</td>
+<td>Klarna Payments (KP) is Klarna&rsquo;s solution for providing merchants with standalone payment methods the user can choose from.</td>
+</tr>
+<tr>
+<td>Payment Method Category</td>
+<td>KP renders categories of payment methods, like <q>Slice It</q>, <q>Pay Now</q> and <q>Pay Later</q>.</td>
+</tr>
+<tr>
+<td>Client Token</td>
+<td>A token identifying an order session.</td>
+</tr>
+<tr>
+<td>Authorization Token</td>
+<td>A token identifying an authorized order. Needed to complete the order.</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Customer credit assessment before completing an order.</td>
+</tr>
+<tr>
+<td>Reauthorization</td>
+<td>New credit assessment if the order details have changed.</td>
+</tr>
+<tr>
+<td>Finalization</td>
+<td>An additional assessment required with some payment methods.</td>
+</tr>
+</tbody></table>
+<h3 id='description-of-the-mobile-sdk' class='heading'>Description of the Mobile SDK</h3>
+
+<p>The Payments SDK is a native integration to render Klarna Payments on iOS and Android. With it, merchants can offer customers Klarna&rsquo;s payment options in their mobile applications easily and safely.</p>
+<h3 id='integration-steps' class='heading'>Integration Steps</h3>
+<h4 id='client-side-integration' class='heading'>Client-side Integration</h4>
+
+<p>The merchant&rsquo;s process to integrate the SDK into their app is roughly four steps:</p>
+
+<ol>
+<li>Initialize the SDK with a client token.</li>
+<li>Load the payment method categories to be rendered.</li>
+<li>When the SDK returns views for these, present them in the application.</li>
+<li>When the user chooses to pay with one of these, authorize the order.</li>
+</ol>
+
+<p>Beyond this, there are a few additional considerations when implementing the SDK:</p>
+<h5 id='error-handling' class='heading'>Error-handling</h5>
+
+<p>Every stage can result in an error. Our APIs for both platforms offer facilities to handle these. In many cases, they can be recovered from, and the customer can continue their checkout process.</p>
+<h5 id='authorization-stage' class='heading'>Authorization Stage</h5>
+
+<p>When a customer chooses to pay with one of Klarna&rsquo;s payment methods, the merchant will need to request the SDK to authorize the order. This is a credit risk assessment where the user might be prompted for information. Merchants can optionally update customer information (e.g. billing address) at this stage.</p>
+
+<p>A successful authorization guarantees that an order can be created within 60 minutes and will return an authorization token to complete the order.</p>
+
+<p>If there are any errors the user can correct, the relevant fields will be highlighted and corresponding error messages will be shown to them.</p>
+
+<p>If a specific payment methods requires finalization, the merchant will get a callback notifying them of it. See below. </p>
+
+<p>Merchants will not handle the potentially sensitive information that is entered in the credit form, this information is only available to Klarna. </p>
+<h5 id='reauthorization-stage' class='heading'>Reauthorization Stage</h5>
+
+<p>Merchants can optionally offer customers the option to update the order (e.g. in an order review/summary view). In these cases, if order details are changed, the merchant needs to call a <code>reauthorize</code> function to get a new authorization token.</p>
+
+<p>We recommend that this method is called as few times as possible. This is because it might prompt the customer for more information as well as because it might trigger additional network requests which might take time. This should ideally only be called when the <q>complete order</q> step of checkout is performed, and then only if the state of the order has changed since authorization.</p>
+<h5 id='finalization-stage' class='heading'>Finalization Stage</h5>
+
+<p>There are certain cases when Klarna might need to perform a second assessment for more information. This is by default performed automatically. In specific cases when it can&rsquo;t be, when the merchant calls <code>authorize</code>, they will instead get notified that they need to call a <code>finalize</code> method, which will then return the authorization token instead.</p>
+<h4 id='server-side-integration' class='heading'>Server-side Integration</h4>
+
+<p>There are two key steps that happen server-side that bookend the merchant&rsquo;s integration:</p>
+
+<ol>
+<li>At the start, create an order with Klarna and retrieve the client token.</li>
+<li>At the end, complete the order.</li>
+</ol>
+
+<p>Merchants will additionally want to sync their order state between their app and their backend as it changes. </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/klarna/kp-mobile-sdk" target="_blank" rel="external">Klarna Team Mobile SDK</a>. All rights reserved. (Last updated: 2018-11-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

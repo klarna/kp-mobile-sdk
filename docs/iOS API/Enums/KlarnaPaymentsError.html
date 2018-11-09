@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KlarnaPaymentsError Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/KlarnaPaymentsError" class="dashAnchor"></a>
+    <a title="KlarnaPaymentsError Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">KlarnaPayments Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">KlarnaPayments Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        KlarnaPaymentsError Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/KlarnaPaymentView.html">KlarnaPaymentView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/KlarnaPayments.html">KlarnaPayments</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KlarnaPaymentsError.html">KlarnaPaymentsError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KlarnaPaymentsResult.html">KlarnaPaymentsResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/KlarnaPaymentViewDelegate.html">KlarnaPaymentViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>KlarnaPaymentsError</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KlarnaPaymentsError</span> <span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
+
+                </div>
+              </div>
+            <p>General error type for all Klarna payments errors.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO18invalidClientTokenA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidClientToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO18invalidClientTokenA2CmF">invalidClientToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invalid client token</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidClientToken</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO27failedToLoadPaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF"></a>
+                    <a name="//apple_ref/swift/Element/failedToLoadPaymentCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO27failedToLoadPaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF">failedToLoadPaymentCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Failed to load payment category</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failedToLoadPaymentCategory</span><span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="nv">shouldShowView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">invalidFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO32failedToAuthorizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF"></a>
+                    <a name="//apple_ref/swift/Element/failedToAuthorizePaymentCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO32failedToAuthorizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF">failedToAuthorizePaymentCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Failed to authorize payment category</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failedToAuthorizePaymentCategory</span><span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="nv">shouldShowView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">invalidFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO34failedToReAuthorizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF"></a>
+                    <a name="//apple_ref/swift/Element/failedToReAuthorizePaymentCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO34failedToReAuthorizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF">failedToReAuthorizePaymentCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Failed to re-authorize payment category</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failedToReAuthorizePaymentCategory</span><span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="nv">shouldShowView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">invalidFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO31failedToFinalizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF"></a>
+                    <a name="//apple_ref/swift/Element/failedToFinalizePaymentCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO31failedToFinalizePaymentCategoryACSS_Sb14shouldShowViewSaySSG13invalidFieldstcACmF">failedToFinalizePaymentCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Failed to finalize payment category</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failedToFinalizePaymentCategory</span><span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="nv">shouldShowView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">invalidFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO9undefinedACs0C0_pcACmF"></a>
+                    <a name="//apple_ref/swift/Element/undefined" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO9undefinedACs0C0_pcACmF">undefined</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undefined error</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">undefined</span><span class="p">(</span><span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14KlarnaPayments0aB5ErrorO16errorDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14KlarnaPayments0aB5ErrorO16errorDescriptionSSSgvp">errorDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructed error descriptions</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/klarna/kp-mobile-sdk" target="_blank" rel="external">Klarna Bank AB</a>. All rights reserved. (Last updated: 2018-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

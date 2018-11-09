@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/nan.wang/Klarna/KP Mobile SDK/KP/SDK/Sources/Error/KlarnaPaymentsError.swift",
+      "line": 31,
+      "symbol": "KlarnaPaymentsError.debugDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/nan.wang/Klarna/KP Mobile SDK/KP/SDK"
+}
